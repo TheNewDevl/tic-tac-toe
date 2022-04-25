@@ -31,13 +31,12 @@ body {
   float: left;
   font-size: 6vw;
   font-weight: bold;
-  line-height: 34px;
+  margin-bottom: -7px;
+  margin-right: -7px;
   height: 18vw;
   width: 18vw;
   max-width: 200px;
   max-height: 200px;
-  margin-right: -1px;
-  margin-top: -1px;
   padding: 0;
   text-align: center;
   color: #fff;
