@@ -4,25 +4,27 @@ body {
   justify-content: center;
   background-color: black;
   font: 4vw 'Century Gothic', Futura, sans-serif;
-  margin: 20px;
   color: #fff;
 }
+
 * {
-  box-sizing: border-box;
   transition: all 0.2s ease-in-out;
 }
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.game {
+  display: flex;
+  align-items: center;
+}
+
 .main_title {
   font-size: 4vw;
   border: 1px solid #fff;
-}
-.board-row:after {
-  clear: both;
-  content: '';
-  display: table;
-}
-
-.status {
-  margin-bottom: 10px;
 }
 
 .square {
@@ -47,9 +49,9 @@ body {
   border: 0.1em solid #fff;
 }
 
-.game {
-  display: flex;
-  flex-direction: row;
+.game-info {
+  line-height: 30px;
+  margin-left: 1em;
 }
 
 .restart__btn {
@@ -61,7 +63,6 @@ body {
   font-size: 1.5vw;
   font-weight: bold;
   padding: 0.5vw;
-  text-decoration: none;
   text-transform: uppercase;
 }
 .restart__btn:hover {
@@ -74,4 +75,23 @@ body {
 .restart__btn:active {
   background-color: #fff;
   color: #000;
+}
+
+/* media queries for screen small than 768px */
+@media screen and (max-width: 768px) {
+  .game {
+    flex-direction: column;
+  }
+  .game-board {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .square {
+    font-weight: bold;
+    height: 18vw;
+
+    max-width: initial;
+    max-height: initial;
+  }
 }
